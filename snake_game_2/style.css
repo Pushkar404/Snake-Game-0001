@@ -1,0 +1,16 @@
+canvas {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  color: #4b5563; /* Tailwind's gray-600 */
+}
+
+footer a {
+  color: #3b82f6; /* Tailwind's blue-500 */
+  text-decoration: underline;
+}

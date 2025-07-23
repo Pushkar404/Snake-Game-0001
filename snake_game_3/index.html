@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-blue-100">
+    <main class="flex-grow flex items-center justify-center">
+      <div class="flex flex-row items-start gap-4">
+        <!-- Left Controls -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex items-center gap-2"
+          >
+            <label for="snakeColor" class="text-sm font-medium text-gray-700"
+              >Snake Color:</label
+            >
+            <input
+              type="color"
+              id="snakeColor"
+              value="#00ff00"
+              class="border-none"
+            />
+          </div>
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex items-center gap-2"
+          >
+            <label for="gameMode" class="text-sm font-medium text-gray-700"
+              >Allow Body Pass:</label
+            >
+            <input type="checkbox" id="gameMode" class="h-5 w-5" />
+          </div>
+        </div>
+        <!-- Game Canvas -->
+        <div class="flex flex-col items-center">
+          <div id="gameCanvas"></div>
+          <div
+            class="bg-white p-4 rounded-lg shadow-md mt-4 flex items-center gap-4"
+          >
+            <span class="text-sm font-medium text-gray-700"
+              >Player:
+              <span id="playerName" class="font-bold">Loading...</span></span
+            >
+            <span class="text-sm font-medium text-gray-700"
+              >Score: <span id="score" class="font-bold">0</span></span
+            >
+            <span class="text-sm font-medium text-gray-700"
+              >High Score: <span id="highScore" class="font-bold">0</span></span
+            >
+          </div>
+        </div>
+        <!-- Right Controls -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="bg-white p-4 rounded-lg shadow-md flex items-center gap-2"
+          >
+            <label for="snakeSpeed" class="text-sm font-medium text-gray-700"
+              >Speed:</label
+            >
+            <input
+              type="range"
+              id="snakeSpeed"
+              min="5"
+              max="20"
+              value="10"
+              class="w-24"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-full text-center py-4 text-gray-600">
+      <p>
+        &lt;&lt;&lt; &copy; Made by
+        <a href="https://github.com/Pushkar404/" class="text-blue-500 underline">
+            Pushkar&#10084
+        </a>&gt;&gt;&gt;
+      </p>
+    </footer>
+    <script src="game.js"></script>
+  </body>
+</html>
